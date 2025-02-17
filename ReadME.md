@@ -1,18 +1,14 @@
-Here is a **README.md** file for your project, including installation instructions, an overview, and how to use the repository. The project name suggestion is **"MelodyGPT: AI-Powered Melody Generation with Transformers"**.
-
----
-
-## **MelodyGPT: AI-Powered Melody Generation with Transformers**
+# MelodyGPT-AI-Powered-Melody-Generation-with-Transformers
 A Machine Learning project that repurposes GPT for melody generation using MIDI datasets, augmentation techniques, and hyperparameter tuning to improve music generation quality.
 
-### **1. Overview**
+ 1. Overview
 This project builds a melody-generating model using a Transformer-based architecture (GPT). The dataset consists of simplified MIDI melodies converted into note sequences. The model is trained on an augmented dataset that includes:
-- **Pitch Transpositions** (±1, ±2 semitones)
-- **Random Rest Insertions** (introducing rhythmic variations)
-- **Duplicate Removal** (reducing redundancy and improving model diversity)
+- Pitch Transpositions (±1, ±2 semitones)
+- Random Rest Insertions (introducing rhythmic variations)
+- Duplicate Removal (reducing redundancy and improving model diversity)
 
-### **2. Project Structure**
-```
+ 2. Project Structure
+
 📂 Final - Result3/
 │── augmentMidiTranslations.py      # Augments MIDI dataset (transposition, rest insertion, duplicate removal)
 │── baseline_generated_melody.mid   # Baseline melody from Markov Model
@@ -31,51 +27,50 @@ This project builds a melody-generating model using a Transformer-based architec
 │── midi2text.py                      # Converts MIDI files into text representations
 │── README.md                         # This file
 │── Result3_loss_curve_*.png          # Loss curves for different hyperparameter settings
-```
 
-### **3. Installation**
-#### **Prerequisites**
+
+ 3. Installation
+Prerequisites
 - Python 3.8+
 - PyTorch (GPU recommended)
 - Required dependencies:
-  ```
+  
   pip install numpy torch torchvision torchaudio matplotlib pydub pretty_midi simpleaudio
-  ```
-  If **simpleaudio** fails to install on Windows, use:
-  ```
+  
+  If simpleaudio fails to install on Windows, use:
+  
   pip install pipwin
   pipwin install simpleaudio
-  ```
+  
   On Linux/macOS, ensure you have development tools:
-  ```
+  
   sudo apt install build-essential python3-dev
-  ```
+  
 
-### **4. Dataset Processing & Augmentation**
+ 4. Dataset Processing & Augmentation
 The project processes MIDI melodies into text representations and applies augmentation techniques:
 - `midi2text.py` → Converts MIDI files into a text format (notes & rests).
-- `augmentMidiTranslations.py` → Applies **±1 and ±2 semitone shifts**, inserts random rests, and removes duplicate sequences.
+- `augmentMidiTranslations.py` → Applies ±1 and ±2 semitone shifts, inserts random rests, and removes duplicate sequences.
 - The final dataset is stored in `inputMelodiesAugmented.txt`.
 
-### **5. Model Training**
+ 5. Model Training
 Run:
-```
 python Final_Result3.py
-```
+
 This will:
 1. Load the dataset and apply preprocessing.
 2. Train a GPT-based model using the best-tuned hyperparameters.
-3. Evaluate performance using **cross-entropy loss and perplexity**.
+3. Evaluate performance using cross-entropy loss and perplexity.
 4. Generate new melodies stored as `.mid` files.
 
-### **6. Baseline vs. GPT Model**
-| Metric         | GPT Model (Final) | Baseline Markov Model |
-|---------------|----------------|-----------------|
-| Validation Perplexity | **2.08** | **4.90** |
-| Train Perplexity | **2.10** | **4.90** |
-| Melody Structure | **Less repetitive, diverse phrasing** | **Random transitions** |
+ 6. Baseline vs. GPT Model
+| Metric                | GPT Model (Final)                 | Baseline Markov Model |
+|-----------------------|-----------------------------------|-----------------------|
+| Validation Perplexity | 2.08                              | 4.90                  |
+| Train Perplexity      | 2.10                              | 4.90                  |
+| Melody Structure      | Less repetitive, diverse phrasing | Random transitions    |
 
-### **7. Hyperparameter Tuning**
+ 7. Hyperparameter Tuning
 Tested different configurations:
 - `n_embd`: {128, 192}
 - `n_layer`: {2, 3}
@@ -83,53 +78,16 @@ Tested different configurations:
 - `dropout`: {0.1, 0.2, 0.3}
 
 The best configuration found:
-```
 {'n_embd': 192, 'n_head': 2, 'n_layer': 2, 'dropout': 0.1}
-```
-Resulting in the lowest validation perplexity **(2.08)**.
+Resulting in the lowest validation perplexity (2.08).
 
-### **8. Generating Melodies**
-Once trained, the model can generate melodies:
-```
-python melodyPlay.py
-```
-- **Final Model Output**: `final_generated_melody.mid`
-- **Baseline Output**: `baseline_generated_melody.mid`
+ 8. Generating Melodies
+Once trained, the model can generate melodies:python melodyPlay.py
+- Final Model Output: `final_generated_melody.mid`
+- Baseline Output: `baseline_generated_melody.mid`
 
-### **9. Evaluation Metrics**
-- **Cross-Entropy Loss**: Measures how well the model predicts the next note.
-- **Perplexity**: Measures uncertainty in predictions (lower is better).
-- **ROC-AUC Curve**: Used for classification evaluation.
+ 9. Evaluation Metrics
+- Cross-Entropy Loss: Measures how well the model predicts the next note.
+- Perplexity: Measures uncertainty in predictions (lower is better).
+- ROC-AUC Curve: Used for classification evaluation.
 
-### **10. Conclusion**
-This project successfully adapts GPT for melody generation, proving that transformer models can learn meaningful musical patterns. By incorporating **data augmentation**, **hyperparameter tuning**, and **a comparative baseline**, it demonstrates how deep learning can be used for creative AI applications.
-
-### **11. References**
-1. [Hyperparameter Tuning in Deep Learning](https://towardsdatascience.com/experiments-on-hyperparameter-tuning-in-deep-learning-rules-to-follow-efe6a5bb60af)
-2. [SVM Kernels and Their Types](https://medium.com/@abhishekjainindore24/svm-kernels-and-its-type-dfc3d5f2dcd8)
-3. [Comparison: SVM vs. Neural Networks](https://www.baeldung.com/cs/svm-vs-neural-network)
-
----
-
-This **README.md** provides a structured overview of your project. You can now **push the project to GitHub**:
-
-1. **Initialize Git Repository**
-   ```
-   git init
-   git add .
-   git commit -m "Initial commit - MelodyGPT"
-   ```
-
-2. **Create a GitHub Repository**
-   - Go to [GitHub](https://github.com)
-   - Create a new repository (e.g., **MelodyGPT**)
-   - Copy the provided `git remote add` command.
-
-3. **Push to GitHub**
-   ```
-   git remote add origin <your-repo-url>
-   git branch -M main
-   git push -u origin main
-   ```
-
-Now your project is live on GitHub! 🚀 Would you like me to create a GitHub repository description for it as well?
