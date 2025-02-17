@@ -1,0 +1,19 @@
+{
+    "final_model": {
+        "config": {
+            "n_embd": 192.0,
+            "n_head": 2.0,
+            "n_layer": 2.0,
+            "dropout": 0.1
+        },
+        "train_loss": 1.4502726793289185,
+        "val_loss": 1.4318448305130005,
+        "train_perplexity": 4.26427698135376,
+        "val_perplexity": 4.186415195465088,
+        "generated_melody": "\nAaa\n\nEcdddaa\ndDaa\n\ndDDa\n\ndaaA\n\n\nddDd\n\naaA\n\ndaaAA\nDA\nAaAAAA\n\n\ndDaAA\nD\nddDaA\n\nddd\ndDaA\nDddda\ndDaA\n\n\n\ndDddARBBBAFdCCBAABFAFFAARaaAaCCdCddD\n\nddddCBBBFBAAFCBAFdCBBBFAAAdCBAFAAACCdCBAFFCBABAFdBBA\ndCBFACBAAAFCBBAFdCBAFdCABABAFCBAAFBAFR\n\nd\naAaD\ndaRBABBCdCdFRAaaaAaRCdCddFBAddCBAR\n\naaAad\na\naaaA\nD\ndRBdddBdddBCdCBdFARDaDdDaaAA\na\nd\n\nddaaaaAaAA\nA\ndRFddFAFdCdCBABAABdBAddCBAddCBACdCBAdCBBBCBABAACBFdCddddCBAdCCBBARaaaa\n\naDddddFddCdd\n\nABAABBBdddddFACBBddFAARaDaaaCaaDaA\nddddFddFddddddCAAAAFFAAAAAAAABCCCAAAEddEdCCA"
+    },
+    "baseline": {
+        "generated_melody": "EERCDEEFcBBCdBBB\n\nAaRCCARRdEEEBBBFFFBGRRGRRRRRREaABDERd\nGccGECCBBCRBG\n\n\nAaDCRdGRDEcBBRRR\nDBA\nG\n\n\nRBBRRR\n\nRRGGEEBEBCRBAA\n\nFBRARD\n\nGGEFEFEDRRDDacF\nCccBBRaCCCadaAcRBAA\nRaEEEDDCBRdRRBBCCCCR\nAF\ndcCBBccDFFCFFFAFFEcaAccBAFCBBD\nGRcE\nBddd\nABBAFEFFFF\nGRRABBBFAaBDDDDBBRCR\nGR\nG\n\n\nBRDRGGGdCAAACRR\n\n\n\nRAAFARRREDcCaRRBcDDCddRdFEE\nDcCAFRRRcDDFBAFEFRC\nBCBR\n\n\nddccGDdRFG\ndddCCcEEDD\n\nFRcCcdAARCBRRBRccDcCBccBGGG\nBAAAABAAEd\ndACEaAABBRRFddcccDaaaACCBBREcaCBRBRABBRAAAAR\nFERddCBBDCRAABRFEDCBdDdED\nERBBBARRGG\ncdR\nRA\n\n\nd\nBR",
+        "perplexity": 8.746169090270996
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "final_model": {
+        "config": {
+            "n_embd": 192.0,
+            "n_head": 2.0,
+            "n_layer": 2.0,
+            "dropout": 0.1
+        },
+        "train_loss": 0.7423562407493591,
+        "val_loss": 0.7318015098571777,
+        "train_perplexity": 2.1008799076080322,
+        "val_perplexity": 2.078822374343872,
+        "generated_melody": "\n \nF\n \na\n \nRAEARABA\nAEABABAR\n \n \n \n \n\n\nRABABABAAAcABAR\n \n \n \n \n \n \n\n\n\n\n \n \n \n \n \n \n \n \n \n \nA\n \nA\n \n \n \n \n \nRABABABABABABABACABABABABABACABABABABABABABABABABACABABACABABABAR\n \n \n \n \n \nF\nF\nA\nF\na\nC\nC\nRABABABABABABAEARARAEAEAEA\nARAR\n\n\nD\nD\nC\nC\nF\nRAAAFAEAEAFAR\n \n \nE\n \n \nF\nF\nF\nF\nF\nF\nRARABARAGABARABARARARARARAAAR\nF\nRARARARARAR\n \nF\nF\nF\nF\n \n \nF\nE\n \nF\nE\nRARARARABARABARAGAGARABAGABAR\nF\nB\nF\nE\nB\nE\nR\n \nF\nF\nF\nB\nF\nF\nR\nE\nF\nF\nE\nR\nF\nB\n \n \nE\n \nF\nF\nF\nE\nR\nE\nE\nE\nF\nF\nE\nF\nF\nF\n \nF\nF\n \nF\nE\n \nF\n \nF\n \nE\n \nF\nC\nRADAGADADADARADA"
+    },
+    "baseline": {
+        "generated_melody": "A\na\nRARARAAC\nFABA\n \na\nc\nE\nCAABA\nA\n\n \nAGAB\nc\nE\nABA \nRADABAcA\nCAEAAA\n AFA\n \nA\nRABAc\nFADAE\na\nc\n AR\nBA\nR\nC\nF\nBARAABABA\n\ncAE\nAB\nR\n \n\n \n\nRARAR\nEAFABA \n\nBA\nR\na\nR\n \n\nCAA \nR\nF\nAAF\na\nC\nB\n\nFAR\nRARAAGAcAEAGA\nRABARARARAGA\nC\nR\nAB\nD\nABAFAEAC\nDA\ncAGAC\nF\nF\n \nC\nEAFARACAF\nFA\nRA\nRABAB\nRAB\n ABAFAA \n\n \nE\nDAF\nFAC\nR\nEAR\n\nR\ncAEARAAAc\na\n AAEA \nE\nc\n\n\nRAGAAR\na\n \nB\nR\nR\nF\nEAAc\n \nc\nD\nARABARABAAD\n\n\n\n \nRAE\nEAcAGAGAGAE\n AR\n AA\nF\ncAADA \n \n \nDAAc\nAD\nR\nRAAR\nD\nR\nF\nAGAAE\n\nR\ncAc\n\n\nDARAAF\nFAEABAARA ACAFAEAB\nC\nACA\n\nF\nR\n \nEA\nBAE\nB\nDA \nBA",
+        "perplexity": 4.903412342071533
+    }
+}
